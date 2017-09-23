@@ -1,4 +1,5 @@
 ﻿using ClassifiedAds.Contracts.Entities;
+using ClassifiedAds.Repositories.MappingConfigurations;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -13,6 +14,12 @@ namespace ClassifiedAds.Repositories.Implementations
         public AdsDbContext(DbContextOptions options) : base(options)
         {
 
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.ApplyConfiguration(new UserConfiguration());
         }
     }
 }
