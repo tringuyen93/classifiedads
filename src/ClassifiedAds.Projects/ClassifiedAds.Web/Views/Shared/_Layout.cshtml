@@ -25,13 +25,13 @@
                 <nav class="navbar-fixed-top navbar navbar-default" style="padding:0;">
                     <div class="container">
                         <div class="navbar-header">
-                            <a href="#" class="navbar-brand"><span class="rv_logo_main_large img-responsive" alt="chotot-logo"></span></a>
+                            <a asp-controller="Home" asp-action="Index" class="navbar-brand"><span class="rv_logo_main_large img-responsive" alt="raovat-logo"></span></a>
                         </div>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a title="Tìm rao vặt" target="_self" href="#"><span class=""><span class="rv_icon  rv_searchIcon "></span></span><span title="Tìm rao vặt" class="rv_icon_text hidden-xs hidden-sm">Tìm rao vặt</span></a></li>
-                            <li class="hidden-xs hidden-sm"><a title="Chat" target="_self" href="#"><span class=""><span class="rv_icon  rv_chatIcon "></span></span><span title="Chat" class="rv_icon_text ">Chat</span></a></li>
-                            <li><a title="Đăng nhập" target="_self" href="#"><span class=""><span class="rv_icon  rv_logIcon "></span></span><span title="Đăng nhập/ Đăng ký" class="rv_icon_text hidden-xs hidden-sm">Đăng nhập/ Đăng ký</span></a></li>
-                            <li class="nav-no-hover-bg-color"><a target="_self" href="#"><span title="ĐĂNG TIN" class="rv_icon_text btn btn-primary">ĐĂNG TIN</span></a></li>
+                            <li><a title="Tìm rao vặt" href="#"><span class=""><span class="rv_icon  rv_searchIcon "></span></span><span title="Tìm rao vặt" class="rv_icon_text hidden-xs hidden-sm">Tìm rao vặt</span></a></li>
+                            <li class="hidden-xs hidden-sm"><a title="Chat" href="#"><span class=""><span class="rv_icon  rv_chatIcon "></span></span><span title="Chat" class="rv_icon_text ">Chat</span></a></li>
+                            <li><a title="Đăng nhập" asp-controller="Account" asp-action="Login"><span class=""><span class="rv_icon  rv_logIcon "></span></span><span title="Đăng nhập/ Đăng ký" class="rv_icon_text hidden-xs hidden-sm">Đăng nhập/ Đăng ký</span></a></li>
+                            <li class="nav-no-hover-bg-color"><a href="#"><span title="ĐĂNG TIN" class="rv_icon_text btn btn-primary">ĐĂNG TIN</span></a></li>
                         </ul>
                     </div>
                 </nav>

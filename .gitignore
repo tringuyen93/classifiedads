@@ -1,4 +1,5 @@
-src/ClassifiedAds.Projects/ClassifiedAds.Web/wwwroot/lib/
-src/ClassifiedAds.Projects/ClassifiedAds.Web/bin/
-src/ClassifiedAds.Projects/ClassifiedAds.Web/obj/
+src/ClassifiedAds.Projects/*/wwwroot/lib/
+src/ClassifiedAds.Projects/*/bin/
+src/ClassifiedAds.Projects/*/obj/
 src/ClassifiedAds.Projects/.vs/
+src/ClassifiedAds.Projects/ClassifiedAds.Repositories/Migrations/

@@ -6,6 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ClassifiedAds.Repositories.Implementations;
+using Microsoft.EntityFrameworkCore;
+using ClassifiedAds.Contracts.Entities;
+using Microsoft.AspNetCore.Identity;
+using ClassifiedAds.Repositories.Interfaces;
+using ClassifiedAds.Contracts.Services;
+using ClassifiedAds.Services;
 
 namespace ClassifiedAds.Web
 {
@@ -22,6 +29,12 @@ namespace ClassifiedAds.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<AdsDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ClassifiedAds")));
+            services.AddIdentity<User, IdentityRole>()
+                    .AddEntityFrameworkStores<AdsDbContext>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

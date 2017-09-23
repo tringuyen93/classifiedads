@@ -6,10 +6,17 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassifiedAds.Contracts\ClassifiedAds.Contracts.csproj" />
+    <ProjectReference Include="..\ClassifiedAds.Repositories\ClassifiedAds.Repositories.csproj" />
+    <ProjectReference Include="..\ClassifiedAds.Services\ClassifiedAds.Services.csproj" />
   </ItemGroup>
 
 </Project>
